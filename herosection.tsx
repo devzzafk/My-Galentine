@@ -57,7 +57,7 @@ const HeroSection = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8 }}
         >
-          this website is made with love (and pixels) just for you, ammu! 🩷
+          this website is made with my love just for you ! 🩷
         </motion.p>
 
         <motion.div
@@ -71,7 +71,7 @@ const HeroSection = () => {
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById("ammu-section")?.scrollIntoView({ behavior: "smooth" })}
           >
-            scroll down bestieee 👇🩷
+            scroll down Twin 👇🩷
           </motion.button>
         </motion.div>
       </motion.div>
