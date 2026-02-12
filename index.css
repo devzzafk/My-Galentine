@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 60% 97%;
+    --foreground: 340 30% 15%;
+
+    --card: 340 50% 95%;
+    --card-foreground: 340 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 15%;
+
+    --primary: 340 70% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 320 50% 92%;
+    --secondary-foreground: 340 30% 20%;
+
+    --muted: 340 25% 90%;
+    --muted-foreground: 340 15% 45%;
+
+    --accent: 340 80% 75%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 30% 85%;
+    --input: 340 30% 85%;
+    --ring: 340 70% 65%;
+
+    --radius: 0.5rem;
+
+    --love: 350 80% 60%;
+    --love-foreground: 0 0% 100%;
+    --bubblegum: 330 60% 80%;
+    --peach: 15 70% 85%;
+    --lavender: 270 40% 85%;
+    --mint: 160 35% 82%;
+    --sunshine: 45 80% 75%;
+
+    --pixel-pink: 340 70% 65%;
+    --pixel-dark: 340 30% 15%;
+    --pixel-light: 340 60% 97%;
+    --pixel-border: 340 50% 45%;
+
+    --font-pixel: 'Press Start 2P', monospace;
+    --font-body: 'Nunito', sans-serif;
+
+    --gradient-love: linear-gradient(135deg, hsl(340, 70%, 65%), hsl(350, 80%, 60%), hsl(330, 60%, 80%));
+    --gradient-candy: linear-gradient(135deg, hsl(340, 70%, 65%), hsl(330, 60%, 80%), hsl(270, 40%, 85%));
+    --gradient-sunset: linear-gradient(135deg, hsl(15, 70%, 85%), hsl(340, 70%, 65%), hsl(330, 60%, 80%));
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    image-rendering: auto;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, .font-pixel {
+    font-family: var(--font-pixel);
+  }
+}
+
+@layer utilities {
+  .gradient-love {
+    background: var(--gradient-love);
+  }
+  .gradient-candy {
+    background: var(--gradient-candy);
+  }
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  .text-gradient-love {
+    background: var(--gradient-love);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .pixel-border {
+    border: 3px solid hsl(var(--pixel-border));
+    box-shadow: 
+      4px 4px 0px hsl(var(--pixel-border)),
+      -1px -1px 0px hsl(var(--pixel-border));
+  }
+  .pixel-shadow {
+    box-shadow: 4px 4px 0px hsl(var(--pixel-border));
+  }
+  .pixel-btn {
+    border: 3px solid hsl(var(--pixel-border));
+    box-shadow: 4px 4px 0px hsl(var(--pixel-border));
+    transition: all 0.1s;
+  }
+  .pixel-btn:active {
+    box-shadow: 1px 1px 0px hsl(var(--pixel-border));
+    transform: translate(3px, 3px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.15); }
+}
+
+@keyframes pixel-walk {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(0) translateY(-4px); }
+  50% { transform: translateX(0) translateY(0); }
+  75% { transform: translateX(0) translateY(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 0px;
+}
