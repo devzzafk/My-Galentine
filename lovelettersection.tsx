@@ -40,7 +40,7 @@ const LoveLetterSection = () => {
             </p>
             <p>
               never change, never stop being you, and never forget that you have someone who 
-              thinks you're the most amazing person in the entire universe. 🌟
+              thinks you're the most amazing person in the entire universe. U DA REAL TWINSKII OF MAH LIFE UMMMMAAAA 🌟
             </p>
             <p className="font-bold text-primary">
               love you to the moon and back,
