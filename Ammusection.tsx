@@ -20,7 +20,7 @@ const AmmuSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          aka the cutest human ever to exist 🩷
+          aka the cutest hooman ever to exist 🩷
         </motion.p>
 
         <motion.div
@@ -33,7 +33,7 @@ const AmmuSection = () => {
           <div className="pixel-border rounded-lg overflow-hidden bg-card p-2">
             <img
               src={ammuImg}
-              alt="Ammu - the cutest bestie"
+              alt="Ammu - the cutest broskii"
               className="w-56 h-72 md:w-72 md:h-88 object-cover rounded"
             />
           </div>
